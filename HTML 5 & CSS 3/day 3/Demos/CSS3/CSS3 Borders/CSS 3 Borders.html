@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3 Borders</title>
+<style>
+div
+{
+background-color:white;
+text-align:center;
+width: 70%
+}
+
+#divRadius
+{
+border:5px solid;
+border-radius:10px;
+-moz-border-radius:10px; /* Old Firefox */
+
+} 
+
+#divShadow
+{
+    /*https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+    /*
+        box-shadow: h-offset (Req.) v-offset (Req.) blur spread color
+    */
+box-shadow: 10px 10px 10px 5px red;
+} 
+
+#divBorderImage
+{
+
+    border: 15px solid transparent;
+    padding: 15px;
+	
+    border-image-source: url(border.png);
+    border-image-repeat: round;/*round stretch*/
+    border-image-slice: 30;
+} 
+</style>
+</head>
+
+<body>
+<br/><br/><br/>
+<div id="divRadius">div Radius</div>
+<br/><br/><br/>
+<div id="divShadow">div Shadow</div>
+<br/><br/><br/>
+<div id="divBorderImage">div Border Image</div>
+</body>
+
+</html> 
