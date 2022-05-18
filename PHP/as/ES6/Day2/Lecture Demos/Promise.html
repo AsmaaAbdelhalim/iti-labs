@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <div id="top10"></div>
+    <script>
+        function getData(url){
+            return new Promise(function(resolve,reject){
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == 4){
+                        if(xhr.status == 200)
+                            resolve(JSON.parse(xhr.responseText));
+                        else
+                            reject("error");
+                    }
+                }
+                xhr.open("get",url,true);
+                xhr.send();
+            });
+        }
+
+        // getData("https://fakestoreapi.com/products/1")
+        // .then((data)=>{console.log(data); 
+        //     return getData("https://fakestoreapi.com/products/2")})
+        // .then((data)=>{console.log(data); 
+        //     return getData("https://fakestoreapi.com/products/3")})
+        // .then((data)=>{console.log(data);})
+        // .catch((error)=>{console.log(error);});
+
+        getData("https://fakestoreapi.com/products")
+        .then((data)=>{console.log(data); return data;})
+        .then((data)=>{data.sort((a,b)=>{return a.price - b.price}); return data;})
+        .then((sortedData)=>{return sortedData.slice(0,10)})
+        .then((first10)=>{
+            for(item of first10){
+                document.getElementById("top10").innerText += item.title;
+                document.getElementById("top10").innerHTML += "<br>";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value and reference type</title>
+</head>
+<body>
+    <script>
+        //value type
+        // var x = 10;
+        // var y = x;
+        // console.log(x); //10
+        // console.log(y); //10
+
+        // x = 20;
+        // console.log(x); //20
+        // console.log(y); //10
+
+        //reference type
+        // var arr = new Array("A","B","C");
+        // var arr2 = arr; //copying address not value
+
+        // console.log(arr.join("-"));
+        // console.log(arr2.join("-"));
+
+        // arr[0] = "Z";
+
+        // console.log(arr.join("-"));
+        // console.log(arr2.join("-"));
+
+        // arr2[0] = "X";
+
+        // console.log(arr.join("-"));
+        // console.log(arr2.join("-"));
+
+        // var x = 10;
+        // function multi(num){
+        //     num*=10;
+        // }
+        // multi(x);
+        // console.log(x); //10
+
+        var arr = new Array(1,2,3);
+        function multi(numbers){
+            for(i in numbers){
+                numbers[i]*=10;
+            }
+        }
+        multi(arr);
+        console.log(arr.join("-")); //10,20,30
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Work Sans", sans-serif;
+    direction: rtl;
+  }
+   /* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170x;
+    }
+  }
+  .container{
+     margin-left: auto;
+    padding-left: 40px;
+    padding-right: 15px;
+  }
+  /* Start Variables */
+:root {
+    --main-color: #007185;
+    /* --secondary-color: #2c4755;
+    --div-padding: 60px;
+    --div-background: #f6f6f6;
+    --main-duration: 0.5s; */
+  }
+  /* End Variables */
+
+
+  /* sectoions */
+.section1,.section2,.section3{
+    width: 100%;
+    margin-bottom:400px ;
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .section1 > div , .section2 > div , .section3 > div {
+        width: 25%;
+        height: 15px;
+        margin-left: 10px;
+  }
+  .section1 h4 , .section2 h4 ,   .section3 h4{
+      color:var(--main-color) ;     
+  }
+  .section1 p ,  .section2 p , .section3 p
+  {
+      font-size: x-large;
+  }
+  .section1 p span , .section2 p span
+  ,  .section3 p span{
+      font-size: 15px;
+  }
+  div.section{
+    width: 84%;
+    float: left;
+  }
+ div.section p{
+  font-size: 15px;
+}
+.filter{
+  width: 12%;
+  float: right;
+  border: 1px solid #000;
+}
+
+
+
+
+

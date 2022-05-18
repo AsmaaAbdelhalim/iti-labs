@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Variable LifeTime</title>
+    </head>
+
+    <body><!-- onload=MyFunction()>-->
+        <center><h2>Variable LifeTime</h2></center><hr />
+        <script>
+            var x;
+            var y = 2; 
+		//var a=11;	
+            function MyFunction() {
+
+				/*var */h=8;
+				var x=3;
+                var z;//local
+				z = 3
+                x = x + 5;
+                document.write("<br/><br/><b>inside MyFunction()</b>");
+                document.write("<br/>x  : " + x);
+                document.write("<br/>y  : " + y);
+				
+				
+				
+
+                document.write("<br/>z  : " + z);
+				
+				document.write("<br/>h  : " + h);
+            }
+			//alert(zz);
+        </script>
+
+        <p>a paragraph between 2 scripts</p>
+
+        <script type="text/javascript">
+		//alert(a);
+            document.write("<br/><br/><b>before calling MyFunction()</b>");
+            document.write("<br/>x initially is :" + x);// undefined
+            document.write("<br/>y initially is :" + y);
+            x = 1;
+            document.write("<br/><br/> x after being initialized is :" + x);//1
+
+            MyFunction();
+
+            document.write("<br/><br/><b>after calling MyFunction()</b>");
+            document.write("<br/>x outside MyFunction() : " + x);
+            document.write("<br/>y outside MyFunction() : " + y);
+            document.write("<br/>h outside MyFunction() : " + h);
+			
+            //document.write("<br/>z outside MyFunction() : " + z);
+            
+			
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+#textarea:focus, input:focus{
+    outline: none;
+}
+#body_style {
+    border: solid 1px blue;
+    display: inline-block;    
+    padding: 5px;
+}

@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>page 2</title>
+	</head>
+	<body>
+		Welcome to page 2</br>
+		<div id="d1"></div>
+		<br>
+		<hr>
+		<div id="d2"></div>
+		
+		<script>
+			 var url=location.href;
+
+			document.getElementById("d1").innerHTML="<b>Current URL:</b>" + url;
+			
+			var qString=location.search; // ?name=test
+
+			document.getElementById("d2").innerHTML="<b>Page 1 sent: </b>" +qString;
+
+			// ?name=test&age=15
+			// split(&) -->  "?name=test" "age=15" // array
+			// split(=) --> "?name" "test&age" "15"
+
+				console.log(qString.split("&"))
+				console.log(qString.split("="))
+
+
+
+
+
+			var name=qString.split("&")[0].split("=")[1];
+
+			// console.log(qString.split("&")[0].split("=")[1])
+
+			// console.log(qString.split("&")[1].split("=")[1])
+
+			var age = qString.split("&")[1].split("=")[1]
+
+
+			document.write("welcome " + name + " your age " + age);
+			
+		</script>
+	</body>
+</html>

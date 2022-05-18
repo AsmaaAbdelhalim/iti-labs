@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+ 
+
+  <input id = "btn" type="button" value="create image" onclick="newTest()">
+
+  <span></span>
+
+  <input type="button" value="change input" onclick="myForm()">
+
+
+  <form onreset="confirm('are you sure?')" id="myform" name="helloform"  onsubmit="alert('welcome to our website')" >
+
+    <input type="button" value="add new option" onclick="mySelect(this)">
+
+
+    <select name="select" id="select" >
+      <option  value="opi1"> opi1</option>
+      <option value="opi2"> opi2</option>
+      <option id="op1" value="opi3"> opi3</option>
+      <option value="opi4"> opi4</option>
+    </select>
+
+
+
+    <input id="text" 
+    onblur="this.style = 'background-color: red'" 
+    onfocus="this.style = 'background-color: green'" 
+    onchange="alert('text')"
+    type="text">
+
+
+    <input type="password">
+    <input type="reset" value="reset">
+    <input type="submit" value="submit">
+
+    <input type="email" name="" id="">
+    
+  </form>
+
+
+
+
+  <p id="p1">hello next</p>
+  <p id="p1">hello next 1</p>
+
+ 
+
+
+<!-- 
+  <img 
+   src="1.jpg"
+   onmouseover="this.src='2.jpg'; this.width = 500"
+   onmouseleave="this.src='1.jpg'; this.width = 200"
+   onclick="alert('hello image')" > -->
+
+
+
+
+<!--     
+    <img src="1.jpg"   onmouseover="changeImage(this)" 
+      onmouseleave="backImage(this)"> -->
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- <img src="1.jpg"  id="myImage"> -->
+
+    <!-- <button onclick="changeMyImage()" >  Change My Image </button> -->
+
+
+    <h3 id="testmyselector">  Hello Css Rule  </h3>
+
+    <i class="myItalicFont">   Hello Class  </i>
+
+
+    <p id="test"> paragraph 1 </p>
+    <p id="test"> paragraph 2 </p>
+    <p id="test"> paragraph 3 </p>
+    <p id="test"> paragraph 4 </p>
+    <p id="test"> paragraph 5 </p>
+
+
+
+
+    <p name="firstPara">Hello World</p>
+
+    <h1 id="h1Id" > DOM  </h1>
+    
+    <p onmouseover="changeMyBtn()" >  test my value </p>
+    <!-- innerHtml -->
+
+    <!--  Dom  -->
+    <input type="button" value="pgColor" onclick="changeMyColor();chnageMyFontColor()">
+
+
+    <input type="button" id="btn" value="Change Text" onclick="ChangeText()">
+
+
+    <input type="text" id="name" value="ahmed" placeholder="Please Enter Your Name" onkeyup="myValue()" onfocus="changeMyBtn()" onblur="backMyBtn()" > 
+    
+    <script src="day4.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        class shape{
+            constructor(w,h){
+                //public members
+                this.width = w;
+                this.height = h;
+            }
+
+            #mo7eet = this.width+this.height;
+
+            //method
+            Area(){
+                return this.width*this.height;
+            }
+        }
+
+        var shape1 = new shape(10,10);
+        console.log(shape1);
+        console.log(shape1.Area());
+        //console.log(shape1.#mo7eet); //error private field
+
+        //inheritance
+        class square extends shape{
+            constructor(l,c){
+                super(l,l);
+                this.color = c;
+            }
+
+            //function overriding (polymorphism)
+            Area(){
+                return this.width*this.height*10;
+            }
+        }
+
+        var square1 = new square(2,"red");
+        console.log(square1.Area());
+    </script>
+</body>
+</html>

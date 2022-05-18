@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+var c=0;
+var t;
+
+
+function startInt()
+{
+  t = setInterval(function(){
+      document.getElementById('txt').value=c;
+      c++;
+    },1000);
+}
+
+function stopCount()
+  {
+    clearInterval(t);
+  }
+</script>
+</head>
+<body><form>
+<input type="button" value="Start count!" onClick="startInt()">
+<input type="text" id="txt">
+<input type="button" value="Stop count!" onClick="stopCount()">
+</form></body>
+</html>

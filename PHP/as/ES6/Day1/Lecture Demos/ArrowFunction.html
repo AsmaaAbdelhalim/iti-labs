@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <input type="button" value="1" id="inc">
+    <script>
+        document.getElementById("inc").onclick = function(){
+            //console.log(this)//button
+            setInterval(()=>{
+                this.value = parseInt(this.value)+1;
+            },1000)
+        }
+        
+        // console.log(this); //window
+        //arrow function does not create new context
+        // document.getElementById("inc").onclick = ()=>{
+        //     console.log(this);
+        // }
+    </script>
+</body>
+</html>

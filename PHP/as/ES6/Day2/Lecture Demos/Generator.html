@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    <script>
+        //generator function
+        function * getNumbers(start,end){
+            //debugger;
+            for(var i=start; i<=end; i++){
+                yield i;
+            }
+        }
+
+        var generator = getNumbers(5,10);
+        console.log(generator.next().value); //5
+        console.log(generator.next().value); //6
+        console.log(generator.next().value); //7
+        // console.log(generator.next().value); //8
+        // console.log(generator.next().value); //9
+        // console.log(generator.next()); //10
+        // console.log(generator.next()); //undefined
+
+        generator = getNumbers(5,10);
+        console.log(generator.next().value); //5
+    </script>
+</body>
+</html>

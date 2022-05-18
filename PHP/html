@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"content="HTML.CSS.XML.JavaScipt">
+    <meta http-equiv="refresh" content="10;URL=home.html">
+    <title>Welcome</title>
+    </head>
+<body style="background-color:blue">
+ <h1 style="color: red> </h1>
+ <h2 style="text-align:center.font-size 16"></p> 
+ <title>Welcome</title> 
+ <p> Asmaa Mohamed </p>
+ <ul>
+ <li> age:31 </li>
+ <li> adress: alminya </li>
+ <li> phones: 010 </li>
+ <li> <a  href= http://www.edu.bsu.edu.eg faculty of education></a></li>
+ <li> graduation year :2016</li>
+ <li> hobbies: handmade </li>
+ <li> <a href=asmaa.abdelhalim.3@facebook.com"> sent me email </a> </li>
+</ul>
+<h2> about me </h2>
+
+<hr>
+<div>
+<span><a href="home.html">home(book mark to the same page)</a></span>
+<span><a href="content us.HTMl"> content us </a> </span>,
+<span><a href="about.html">about</a></span>
+</div>
+<div style="text-align: center"></div>
+ </body> 
+
+
+</b></body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head></head>
+
+<body>
+<h2>Built-in Functions Demo</h2><hr />
+<script>
+/*a=10;
+b="a";
+c=a+b;
+document.write(c);
+*/
+
+    x = isNaN("abc");
+    alert("isNaN(\"abc\") "+x); //true
+    
+    x = isNaN("10");
+    alert("isNaN(\"10\") "+x); //false
+
+    y = 10;
+    alert("isNaN(10)"+isNaN(y)); //false
+
+    document.write("<br/><br/>isFinite(2.2345) "+isFinite(2.2345));//returns true
+    document.write("<br/></br/>isFinite(\"Hello\") "+isFinite("Hello"));//returns false
+
+    f = 999; w = "777"; ww = 777;
+    document.write("<br/></br/>eval(f + w) "+eval(f + w));//999777
+    document.write("<br/></br/>eval(f + ww) " + eval(f + ww));//1776
+    document.write("<br/></br/>eval(f + parseInt(w)) " + eval(f + parseInt(w))); //1776
+
+	//alert(parseInt("0xD9",16));
+/*
+    myVar = new Boolean("t");
+    document.write(Number(myVar));//1
+    document.write("<br/>" + String(myVar))  //true  
+
+    myVar = "t";
+    document.write("<br/>" + Number(myVar)); //NaN
+    document.write("<br/>" + String(myVar))  //t
+
+    myVar = 10;
+    document.write("<br/>" + Number(myVar)); //10
+    document.write("<br/>" + String(myVar))  //10
+//isNaN(1/0)     
+    */
+    
+
+</script>
+
+</body></html>

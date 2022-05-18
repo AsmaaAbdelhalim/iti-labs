@@ -1,0 +1,178 @@
+  <html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+</head>
+<body>
+ <!-- <button id="generat" onclick="myGenerator()">generat1</button>
+<button id="generat" onclick="myGenerator()">generat2</button> -->
+     -->
+    <script>
+    function student(name, University, faculty, finalGrade) {
+        this.Name = name;
+        this.University = University;
+        this.Faculty = faculty;
+        this.FinalGrade = finalGrade;
+    }
+//  function student()
+    let std = new student("Asmaa", "Minya", "Arts and Education", "Verygood");
+    console.log(`${std.Name} is a student in faculty of ${std.Faculty} in university ${std.University}
+    And his final grad is ${std.FinalGrade}.
+    `);
+    
+    
+    
+    var students=["asmaa","safaa","hanaa","ahmed","ali","asmaa"];
+     my_sets = new Set();
+     console.log(my_sets)
+     console.log(...my_sets)
+     console.log([...my_sets])
+     my_sets.add('asmaa');
+     my_sets.add('safaa');
+     my_sets.add('hanaa');
+     my_sets.add('ahmed');
+     my_sets.add('ali');
+     console.log(my_sets);
+     for (let items of my_sets)
+     console.log(items)
+
+
+
+    //  var arr =["tip1 ,tip2 ,tip3 ,tip4 ,tip5 ,tip6 ,tip7 ,tip8 ,tip9 ,tip10"]
+    
+    //  function* get() 
+    //  {
+    //  for(let i = 0 ;i<arr_length; i++){
+    //   yield arr[i];
+    //   }
+    // }
+    // const asmaa = get(); 
+    // setInterval(alert(asmaa.next().value),1000);
+
+
+    // var arr=["0, 1, 2, 3, 4, 5, 6, 7, 8, 9"];
+    // function* generat();
+    //  { yield*["0, 1, 2, 3, 4, 5, 6, 7, 8, 9"];   
+    // }
+    //     let x = generat();
+    //     console.log(x.next().value);
+    //     function* generat(){
+    //         yield*["0, 1, 2, 3, 4, 5, 6, 7, 8, 9"];
+    //     }
+     function* myGen() {
+   let counter = 0;
+    for(let i = 0 ; i <= 10; i++){
+     yield counter++;    
+    }
+}
+
+const gen = myGen();
+ const start= setInterval(() => {
+    if(gen.next().done){
+        clearInterval(start);
+    } else {
+        console.log(gen.next().value);  
+    }
+}, 1000)
+
+// hhhhhh
+
+// function* myGen() {
+//   let counter = 0;
+//   var arr=[0,1,2,3,4,5,6,7,8,9]
+//   for (let i = 0; i <= 10; i++) {
+//     yield counter++;
+//   }
+// }
+
+// const generat = myGen();
+
+// (async() => {
+//   for (let n of gen) {
+//     await new Promise(resolve => {
+//       setTimeout(() => {
+//         console.log(n);
+//         resolve()
+//       }, 1500)
+//     })
+//   }
+// })();
+
+
+// function* myGen(){
+//     let counter = 0;
+//     for(let i = 0 ; i <= 10; i++){
+//         yield counter++;    
+//     }
+// }
+
+// const generator = myGen();
+// const start = setInterval(() => {
+//     var next = gen.next();             // *** Save it here
+//     if(next.done){                     // *** Use it here...
+//         clearInterval(start);
+//     } else {
+//         console.log(next.value);       // *** ...and here
+//     }
+// }, 150)
+
+
+//     var next = gen.next();             // *** Save it here
+//     if(next.done){                     // *** Use it here...
+//         clearInterval(start);
+//     } else {
+//         console.log(next.value);       // *** ...and here
+//     }
+// }, 150);
+
+
+function* myGen(){
+    let counter = 0;
+    for(let i = 0 ; i <= 10; i++){
+        yield counter++;    
+    }
+}
+
+// const gen = myGen();
+// const start = setInterval(() => {
+//     if(gen.next().done){
+//         clearInterval(start);
+//     } else {
+//         console.log(gen.next().value);  
+//     }
+// }, 1500)
+
+      </script>
+      </body>
+      </html>
+
+
+      <!-- var asmaa = {};
+      asmaa.id = 1,
+      asmaa.name = "Asmaa"
+      asmaa.address = "Minya"
+      asmaa.skills= ["handmade", "coloring"]
+      asmaa.isLeader= "true"
+
+      var ahmed = {};
+      ahmed.id = 1,
+      ahmed.name = "ahmed",
+      ahmed.address = null
+      ahmed.skills= [" coding"]
+      ahmed.isLeader= "true";
+
+      var ali = {};
+      ali.id = 1,
+      ali.name = "ali",
+      ali.address = "Minya",
+      ali.skills= ["fishing", "coloring"],
+      ali.isLeader= "true";
+
+      var students=[asmaa,ahmed,ali]
+
+  for (let i = 0; i < students.length; i++) {
+      console.log(students[i].name)
+      console.log(students[i].skills)
+  } -->

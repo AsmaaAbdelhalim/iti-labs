@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <form action="thank.html">
+                        <label>FullName</label><br>
+                        <input type="text" value="fullName" placeholder="Full Name"  id ="fullName"
+                        onfocus="showBorder(this)" onblur="hideBorder(this)"  onkeyup="validateText(this)" required/><br>
+                        <span id="span"></span>
+                        <label>E_mail:</label><br>
+                        <input type="email" value="email" placeholder="E_mail" required/><br>
+                        <select id = "myList" onchange = "favTutorial()" >  
+                            <option> ---some countries--- </option>  
+                            <option> Egypt </option>  
+                            <option> Dubai </option>  
+                            <option> Saudi Arabia </option>  
+                            <option> Lebanon </option>  
+                        </select>  
+                        <br> <label>password</label><br>
+                        <input type="password" placeholder="password" id="password"/>
+                        <br> <label> Repeat password</label><br>
+                        <input type="password" placeholder="repeat password" id="repeat_passord"/>
+                        <input type="checkbox" value="I accept the terms and conditions"/>I accept the terms and conditions<br>
+                        <button type="submit"  value="submit">submit</button>
+                    </form> 
+                     <img src="images/g.jpg">
+
+
+
+                   <script> function showBorder(this){
+                    this.style.border = " 1px solid blue";
+                }
+
+
+                function hideBorder(this){
+                    
+                    this.style.border = "auto";
+                    
+                }
+                function validateText(this) {
+                    var temp = new Regex("^[A-Za-z]{3,}");
+                    var yourVal = (document.getElementById("text1").innerHTML = "asd12");
+                    if (this.value !== "" && temp.ISMatch(yourVal)) {
+                    document.getElementById("span").style.visibility = "hidden";
+                    } else {
+                    document.getElementById("span").innerHTML ="invalid name";
+                    document.getElementById("text1").focus().select();
+                    }
+                }
+</script>
+
+
+
+
+
+
+            <!-- <button  onmouseover="changPhoto()" onmouseleave="stop()">Change The Photo</button>
+            <img id="img1" src="g.jpg"/>
+            <script>
+                var img
+                function changPhoto(){
+                    img = setInterval (function changeph(){
+                            document.getElementById("img1").src="h.jpg";
+                    },100)
+                }
+                function stop()
+                {
+                    clearInterval(img)
+                }
+            </script> 
+
+
+
+
+              <script>
+                    var img1 =document.createElement("img");
+                    img1.src ="g.jpg";
+                    var img2 = document.createElement("img");
+                    img2.src ="i.jpg";
+                    var img3 =document.createElement("img");
+                    img3.src="im.jpg";
+                    var img4 =document.createElement("img");
+                    img4.src ="h.jpg";
+                    document.body.appendChild(img1);
+                    document.body.appendChild(img2);
+                    document.body.appendChild(img3);
+                    document.body.appendChild(img4);
+                
+                
+                    var img = document.getElementsByTagName("img");
+                    for( i=0;i<4;i++)
+                    {
+                        img[i].opacity=.2;  
+                    }
+                    for( i=0;i<4;i++)
+                    {
+
+                    img.addEventListener("mouseover",
+                    function imgDecrees(){
+                img.style.opacity = .3; 
+                    });
+                img.addEventListener("mousemove",
+                    function imgDisplay(){
+                img.style.opacity = 1; 
+                    })    
+                    } 
+                 </script>
+            
+                
+                <div id =.this is div1</div>
+                <script>
+                    
+                    var img= document.createElement("img");
+                    img.src ="t.jpg";
+                      document.getElementById("div").appendChild(img);
+                    var divs=document.getElementsByName(div);
+                       alert(divs.length);
+                    
+                    //  document.body.insertBefore(img,document.getElementById("div"));
+                    alert(divs.length);
+                    for(i=0;i<length-1;i++)
+                    {
+                        document.removeChild(divs[i]);
+                    }
+                </script>  -->
+
+
+
+                <!-- <script> -->
+<!-- //                 let images = ['g.jpg', 'im.jpg', 't.jpg'];
+
+// let index = 0;
+// const imgElement = document.querySelector('#mainPhoto');
+
+// function change() {
+//    imgElement.src = images[index];
+//    index > 1 ? index = 0 : index++;
+// }
+
+// window.onload = function () {
+//     setInterval(change, 5000);
+// };
+                
+
+// var images= ['g.jpg', 'im.jpg', 't.jpg'];
+
+// images[0] = ['photoFromInternet'];
+// images[1] = ['photoFromInternet2'];
+// images[2] = ['photoFromInternet3'];
+// var index = 0;
+
+// function change() {
+//   document.getElementById("mainPhoto").src = images[index];
+//   if (index == 2) {
+//     index = 0;
+//   } else {
+//     index++;
+//   }
+
+//   setTimeout(change, 5000);
+// }
+
+// window.onload = change();
+    </script> -->
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Automatic Slideshow</h2>
+    <p>Change image every 2 seconds:</p>
+    
+    <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/g.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/im.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/t.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+    </body>
+    </html> 
+
+
+
+</body> -->
+</html>

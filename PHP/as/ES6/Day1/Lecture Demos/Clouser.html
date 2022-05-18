@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouser</title>
+</head>
+<body>
+    <script>
+        // function sayHi(name){
+        //     var user = name;
+            
+        //     function greeting(){
+        //         alert("Hi "+user);
+        //     }
+
+        //     return greeting;
+        // }
+
+        // var greetingFunction = sayHi("ITI Minia");
+        // greetingFunction();
+
+        function closureTest(){
+            var arr =[];
+            for(var i = 0; i < 3; i ++) {
+                arr.push(
+                    (function(x)
+                        {return function(){alert(x);}})
+                    (i));
+            }
+            return arr;
+        }
+        var cFn = closureTest();
+        cFn[0](); 
+        cFn[1]();
+        cFn[2]();
+    </script>
+</body>
+</html>

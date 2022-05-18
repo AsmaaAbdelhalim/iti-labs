@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-compatible"
+        content="IE=edge">
+        <meta Name="viewport" 
+        content="width=device-width,initial-scale=1.0">
+       <title> java </title>
+       <link rel="stylesheet" href="js.css">
+       <script src="day4.js"></script>
+       <style>* {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
+      
+      /* The grid: Four equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+      }
+      
+      /* Style the images inside the grid */
+      .column img {
+        opacity: 0.8; 
+        cursor: pointer; 
+      }
+      
+      .column img:hover {
+        opacity: 1;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* The expanding image container */
+      .container {
+        position: relative;
+        display: none;
+      }
+      
+      /* Expanding image text */
+      #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+      }
+      
+      /* Closable button inside the expanded image */
+      .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }</style>
+       </head>
+      
+       <Body>
+        <!-- <h1> welcome </h1>
+        <input type="button" value = "pccolor" onclick = "changeMyColor()"
+        >
+        <input type="button" value = "change text" onclick = "changetext()">
+         -->
+
+      
+
+            <!-- <table style="border:1px solid blue" id="name" ></table> -->
+            <form action="welcom.html" method="get">
+            <ul>
+            <li>Full Name:</label></li>
+            <li><input type="default text" id="name" placeholder=" please enter your name" onfocus="select()"
+             onblur="notselect()"
+
+              required></li>
+
+            <li><label for="password">Password:</label></li>
+            <li><input type="password" id="password" placeholder=" please enter your Password" required /></li>
+
+
+            <li><label for="Repeat Password">Repeat Password:</label></li>
+            <li><input type="password" id="Repeat Password" placeholder=" please Repeat your Password" required /></li>
+
+            
+            <li><label for="email">Email:</label></li>
+            <li><input type="email" id="email" placeholder=" please enter your name" required/></li>
+
+
+            <li><label for="city">City:</label></li>
+            <li><select name="city" id="city" onchange="select1()">
+            <option selected="" value="Default">(Please Select Your City)</option>
+            <option value="1">Egypty</option>
+            <option value="2">Canada</option>
+            <option value="3">France</option>
+            <option value="5">Russia</option>
+            <option value="6">USA</option>
+            </select></li>
+            
+            <li><input type="checkbox" name="terms" value="terms" checked />"I Accept the terms and conditions"</li>
+            
+            <li><input type="button" name="submit" form action="welcome.html" onsubmit="welcome()" value="Submit" /></li>
+            </ul>
+            </form>
+            </body></form>
+            </html>
+        
+
+
+      
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="../images/g.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="../images/i.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="../images/im.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="../images/t.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../images/g.jpg" style="width:20%">
+        <div class="text">girl</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../images/h.jpg" style="width:20%">
+        <div class="text">HappyBirthday</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../images/t.jpg" style="width:20%">
+        <div class="text">ThankYou</div>
+      </div>
+      
+      </div>
+        
+    
+</body>
+</html>
+

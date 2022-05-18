@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <div id="product"></div>
+    <script>
+        //callback function
+        // function printMessage(msg,time,cbf){
+        //     setTimeout(()=>{
+        //         console.log(msg);
+        //         cbf();
+        //     },time)
+        // }
+        // printMessage("Hello",2000, ()=>{console.log("after print message");});
+
+        var data = {};
+        function getProduct(cbf){
+            var xhr = new XMLHttpRequest();
+            //event handling
+            xhr.onreadystatechange = function(){
+                if(xhr.status == 200 && xhr.readyState == 4){
+                    data = JSON.parse(xhr.responseText);
+                    //when request is finished 
+                    cbf();
+                    // console.log("in get product");
+                    // console.log(data);
+                }
+            }
+            //non-blocking
+            xhr.open("get","https://fakestoreapi.com/products/1",true);
+
+            //blocking
+            //xhr.open("get","https://fakestoreapi.com/products/1",false);
+            xhr.send();
+        }
+
+        getProduct(display);
+        // console.log("after get product");
+        // console.log(data);
+
+        function display(){
+            document.getElementById("product").innerText = data.title;
+        }
+    </script>
+</body>
+</html>

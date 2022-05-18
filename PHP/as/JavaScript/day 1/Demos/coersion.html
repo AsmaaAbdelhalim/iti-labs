@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" language="javascript">
+         	document.write("<br/><b>false==0</b> " +(false==0));//true
+			document.write("<br/><b>\'1\'==1</b> " +('1'==1));//true
+			document.write("<br/><b>null<1</b> " +(null<1));//true
+			document.write("<br/><b>null==0</b> " +(null==0));//false// although null coerce to 0
+			document.write("<br/><b>null==undefined</b> " +(null==undefined));//true
+			document.write("<br/><b>\' \'==0</b> " +(''==0));//true
+			document.write("<br/><b>\' \'==false</b> " +(''==false));//true
+			
+			///////////
+			/*
+			var x=1+2;
+			var y='1'+2;
+			var z=1+'2';
+			
+			alert(x);
+			alert(y);
+			alert(z);
+			*/
+			
+			//////
+			console.log(1<2<3);//true
+			console.log(3<2<1);//true
+			//Number(false);
+			//Number(true);
+			console.log(3<(2<1));//false
+         </script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>

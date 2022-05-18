@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <input type="button" id="go" value="go">
+    <script>
+        //declerative functions are hoisted
+        //sayHi();
+        function sayHi(){
+            alert("Hello");
+        }
+
+        //Dynamic Anonymous function
+        //greeting("ITI"); //Error: greeting is not a function
+        var greeting = new Function("name","document.write('Goodmorning '+name);");
+        //console.log(greeting);
+        //greeting("ITI");
+
+        //Function expression
+        // setInterval(function(){
+        //     console.log("Hi");
+        // },1000);
+
+        document.getElementById("go").onclick = function(){
+            alert("whatever")
+        }
+    </script>
+</body>
+</html>

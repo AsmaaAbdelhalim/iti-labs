@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<script>
+var x;
+var mycars = new Array();
+mycars[0] = "Saab";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+
+document.write ("For loop");
+for (let i=0;i<mycars.length;i++)
+  document.write("<br>" + mycars[i]);
+
+
+document.write ("<hr> for in");
+
+for (x in mycars)
+{
+  document.write( "<br>"+ mycars[x]);
+}
+
+
+document.write ("<hr> for of");
+
+for (x of mycars)
+{
+  document.write( "<br>"+ x);
+}
+</script>
+
+</body>

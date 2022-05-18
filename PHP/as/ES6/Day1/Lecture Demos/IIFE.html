@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    <div id="calc"></div>
+    <script>
+        (function(name){
+            document.write("Hello "+name);
+        })("ITI");
+
+        for(var i=0; i<10; i++){
+            var button = document.createElement("input");
+            button.setAttribute("type","button");
+            button.value = i;
+            button.onclick = (function(x){ //IIFE
+               return function(){console.log(x);}
+            })(i);
+            document.getElementById("calc").appendChild(button);
+        }
+    </script>
+</body>
+</html>

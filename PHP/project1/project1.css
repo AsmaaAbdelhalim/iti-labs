@@ -1,0 +1,62 @@
+p,div,span 
+{
+    font-family: lucida calligraphy;
+background-color: rgb(140, 192, 209);
+height: auto;
+}
+
+#header{
+    margin: 0px;
+    background-color: rgb(113, 175, 101);
+
+  text-align: center;
+
+} 
+  .nav { 
+  text-align: center;
+  height: 30px;
+  background-color: aquamarine;}
+
+.left {float:left ;
+ 
+    color: rgb(138, 40, 117) ;;
+    width:180px;
+    height: 1000px;
+    top:0;
+   
+  }
+  
+  .middel {float:center; 
+    text-align: center;
+
+    width: 30px;
+    background-color: rgb(49, 107, 88);
+
+      }
+      .zoom {
+        padding: 50px;
+        transition: transform .2s; /* Animation */
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+      }
+      
+      .zoom:hover {
+        transform: scale(1.5); }
+      
+  
+ 
+ 
+  .right {
+    float: right;
+    color: rgb(138, 40, 117);
+    width:180px;
+    height: 1000px;
+    top:0;
+   
+ 
+  }
+  .footer {
+    float: unset;
+    color: blue;
+  }

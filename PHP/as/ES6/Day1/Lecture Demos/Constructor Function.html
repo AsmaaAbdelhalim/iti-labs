@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <script>
+        //constructor function
+        function Student(name,age){
+            //public member
+            this.Name = name;
+            this.Age = age | 0;
+            this.setDegrees = function(degrees){
+                var sum = 0;
+                for(i in degrees){
+                    sum += degrees[i];
+                }
+
+                GPA = sum/degrees.length;
+            }
+
+            this.getGPA = function(){
+                return GPA;
+            }
+
+            this.toString = function(){
+                return `Name:${this.Name}-Age:${this.Age}`;
+            }
+            
+            //private members
+            var GPA=0; 
+        }
+
+        var std = new Student("Mohamed",19,3.5);
+        console.log(std);
+        // console.log(std.Name);
+        console.log(std.toString())
+        
+        // std.setDegrees([10,20,30]);
+        // console.log(std.getGPA());//undefined
+
+        var std2 = new Student();
+        //console.log(std2.Name); //undefined
+        // std2.Name = "Soha";
+        // console.log(std2.Name); //Soha
+    </script>
+</body>
+</html>

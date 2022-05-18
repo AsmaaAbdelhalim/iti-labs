@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Function</title>
+</head>
+<body>
+    <script>
+        var x = 20;
+
+        function multiNumber(x){ //get number and multi by random number
+            //inner function
+            //not accessable outside the outter function
+            
+            //x is accessable here because x is in bigger scope
+            var length = 10;
+
+            function getrandom(){ //get random number
+                //length is accessable here because it is in bigger scope
+                var digit = Math.round(Math.random()*length);
+                return digit;
+            }
+
+            //console.log(digit); //error
+            var result = x * getrandom();
+            return result;
+        }
+
+        console.log(multiNumber(10));
+        //console.log(getrandom());//error
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    var webclass =
+        {
+            wclass:
+                [
+                    {
+
+                        student:
+                            {
+                                id:1,
+                                name:"Linda Jones",
+                                legacySkill:["Access", "VB 5.0"]
+                            }
+                    },
+                {
+                    student:
+                    {
+                        id:2,
+                        name:"Adam Davidson",
+                        legacySkill:["Cobol", "MainFrame"]
+                    }
+                }
+            ]
+        }; 
+
+
+
+        document.write(webclass.wclass[1].student.legacySkill[0])
+      
+
+        document.write(webclass.wclass[1].student.name)
+    </script>
+    
+</body>
+</html>

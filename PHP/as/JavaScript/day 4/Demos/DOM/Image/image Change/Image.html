@@ -1,0 +1,35 @@
+<script>
+    function mouseIn(myImage) {
+
+        console.log(myImage)
+        myImage.width = 300;
+        myImage.height = 350;
+        myImage.border = 2;
+    }
+
+    function mouseOut(myImage) {
+        myImage.width = 180;
+        myImage.height = 280;
+        myImage.border = 0;
+    }
+</script>
+
+<body>
+    <center>
+
+
+        <img name="fImage" id="img1" src="1.jpg"
+         onmouseover="mouseIn(this)" 
+         onmouseout="mouseOut(this)" 
+         ondblclick="alert('give me a name')"> 
+
+         <!-- this -> tag  -->
+
+
+
+
+        <img name="girl2" src="2.jpg" id="m1" width="180" height="280" border="0" onmouseover="mouseIn(this)" onmouseout="mouseOut(this)">
+
+
+    </center>
+</body>

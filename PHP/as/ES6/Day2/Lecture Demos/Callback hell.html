@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Hell</title>
+</head>
+<body>
+    <script>
+        function getData(url,callback){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState == 4 && xhr.status == 200){
+                    callback(JSON.parse(xhr.responseText));
+                }
+            }
+            xhr.open("get",url,true);
+            xhr.send();
+        }
+
+        //callback hell
+        getData("https://fakestoreapi.com/products/1",(data)=>{
+            console.log(data);
+            getData("https://fakestoreapi.com/products/2",(data)=>{
+                console.log(data);
+                getData("https://fakestoreapi.com/products/3",(data)=>{
+                    console.log(data);
+                })
+            })
+        });
+    </script>
+</body>
+</html>

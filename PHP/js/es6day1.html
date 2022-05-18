@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6</title>
+</head>
+<body>
+      
+    
+    <script>
+      
+alert((function sum(x,y) {
+   return(x + y);
+  })(1,2)
+  );
+  console.log("odd numbers .............");
+const Arr= [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const odds = Arr.filter
+ ((num) => num % 2 !== 0);
+console.log(odds); 
+console.log("--------------------------------");
+
+const Array= [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let evens =[];
+//const forEach = 
+console.log("even numbers .............");
+Arr.forEach((num) => {
+if (num % 2 === 0) {
+evens.push(num);
+}
+});
+console.log(evens)
+console.log("--------------------------------");
+
+
+const square = [1, 2, 3, 4, 5,6,7,8,9].map(function(value){
+	return Math.pow(value,2);
+});
+console.log(square);
+console.log("--------------------------------");
+
+// // console.log(materials.map(material => material.length));
+
+
+const arr =[1,2,3,4,5,6,7,8,9]
+for (const key in arr) {
+    console.log(arr[key]);
+}
+for (const iterator of arr) {
+    console.log(iterator);
+}
+console.log("--------------------------------");
+
+// array.forEach(element => {
+    
+// });
+
+function sum(x, y, z) {
+  return x + y + z; }
+const numbers = [1, 2, 3];
+//console.log(sum(...numbers));
+
+console.log(sum(numbers))
+console.log("------------------")
+console.log(sum(...numbers))
+
+
+// function student(name, University, faculty, finalGrade) {
+//     this.Name = name;
+//     this.University = University;
+//     this.Faculty = faculty;
+//     this.FinalGrade = finalGrade;
+// }
+
+// let student = new student("Asmaa", "Minya", "Arts and Education", "Verygood");
+// console.log(`${std.Name} is a student in faculty of ${std.Faculty} in university ${std.University}
+// And his final grad is ${std.FinalGrade}.
+// `);}
+
+
+// function students()
+// var students=["asmaa","safaa","hanaa","ahmed","ali"];
+//  my_sets = new set (students);
+//  console.log(my_sets)
+//  console.log(...my_sets)
+//  console.log([...my_sets])
+//  my_sets.add('asmaa');
+//  my_sets.add('safaa');
+//  my_sets.add('hanaa');
+//  my_sets.add('ahmed');
+//  my_sets.add('ali');
+//  console.log(my_sets);
+//  for (let items of my_sets)
+//  console.log(items)
+//  var arr =["tip1 ,tip2 ,tip3 ,tip4 ,tip5 ,tip6 ,tip7 ,tip8 ,tip9 ,tip10"]
+//  function* get() 
+//  {
+//  for(let i = 0 ;i<arr_length 1++);
+
+//   yield arr[i]
+//   }
+ 
+</script>   
+</body>
+</html>

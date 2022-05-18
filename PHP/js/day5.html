@@ -1,0 +1,227 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="reload()">
+     
+    
+        Enter name: <input type="text" id="name" name="Name" />
+        <br />
+        Enter password: <input type="password" id="password" name="password" />
+ 
+        <hr />
+        <input type="button" value="login" id="login" onclick="onSubmitLocal()" />
+        <input type="checkbox" id="login1" value="remember">remember
+       
+        <hr />
+    
+    
+        <div>
+            <br>
+            <div id="first"> </div>
+             <div id="last"> </div>
+            <img id="avatar" src="" >
+            <input type="button" value="show user" onclick="showUser()" />
+            enter user id<input type="text" id="userId">
+        </div>
+        <hr>
+
+        
+
+
+
+        <input type="button" id="button" onclick="getAllUsers()" value="get all users" />
+        
+
+        <script>
+           function reload () {
+   
+                document.getElementById("name").value = localStorage.getItem("name");
+                document.getElementById("password").value = localStorage.getItem("password");
+            }
+            
+            function CreateCookie() {
+            var date = new Date();
+            d.setDate(d.getDate() + 3);
+            
+            var cookievalue = escape(document.getElementById("name").value);
+
+            
+            document.cookie = "name=" + cookievalue + ";expires=" + d.toUTCString();
+            alert("Setting Cookies : " + "user NAME=" + cookievalue);
+
+            cookievalue = escape(document.getElementById("password").value);
+            document.cookie = "PASSWORD=" + cookievalue + ";expires=" + d.toUTCString();
+            alert("Setting Cookies : " + "PASSWORD=" + cookievalue);
+        }
+
+            function onSubmitLocal() {
+             var name=document.getElementById("name").value
+             var password=document.getElementById("password").value
+            if(document.getElementById("login1").checked==true){
+             localStorage.setItem("name", name);
+             localStorage.setItem("password", password);
+
+                                   } else{
+                                        localStorage.removeItem("name");
+                                        localStorage.removeItem("password");
+                                   }
+            }
+            var asmaa = {};
+                asmaa.id = 1,
+                asmaa.name = "Asmaa"
+                asmaa.address = "Minya"
+                asmaa.skills= ["handmade", "coloring"]
+                asmaa.isLeader= "true"
+
+                var ahmed = {};
+                ahmed.id = 1,
+                ahmed.name = "ahmed",
+                ahmed.address = null
+                ahmed.skills= [" coding"]
+                ahmed.isLeader= "true";
+
+                var ali = {};
+                ali.id = 1,
+                ali.name = "ali",
+                ali.address = "Minya",
+                ali.skills= ["fishing", "coloring"],
+                ali.isLeader= "true";
+
+                var students=[asmaa,ahmed,ali]
+
+            for (let i = 0; i < students.length; i++) {
+                console.log(students[i].name)
+                console.log(students[i].skills)
+            }
+
+
+            function showUser(){
+            var userId=document.getElementById("userId").value
+            var url="https://reqres.in/api/users/" +userId
+
+            var xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var user = JSON.parse(xhr.responseText).data;
+                        document.getElementById("avatar").src = user.avatar;
+                        document.getElementById("first").innerHTML= user.first_name;
+                        document.getElementById("last").innerHTML= user.last_name;
+                    }
+                };
+
+
+                
+                xhr.open("get", url, true);
+                xhr.send();
+            }
+
+
+
+            function getAllUsers() {
+                var xhr = new XMLHttpRequest();
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var users = JSON.parse(xhr.responseText).data;
+                        
+                        for (let i = 0; i < users.length; i++) {
+                            // document.getElementById("image").src = users[i].avatar ;
+                            document.getElementById("first").innerHTML += users[i].first_name + "<br>";
+                            document.getElementById("last").innerHTML += users[i].last_name + "<br>";
+                        }
+                    }
+                };
+                var url = "https://reqres.in/api/users"
+                
+                xhr.open("get", url, true);
+                xhr.send();
+
+            }
+
+        </script>
+</body>
+
+</html>
+"use strict";
+    // //     const selectEle = document.querySelector("#selecttest")
+    // //     const Btn = document.querySelector("#btn")
+    // //     const users = document.querySelector("#users")
+    // //     const usering = document.querySelector("#usering")
+    // //     const load = async() => {
+    // //         try{
+    // //             const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    // //             const data = await res.jons();
+    // //             return data;
+    // //         } catch (err) {
+    // //             console.error(err)
+    // //         }
+    // //     };
+    // //     const showData = (data) =>{
+    // //         const htmlString = data.map((data) => {
+    // //             return
+    // //             <option> ${data.name} </option>;
+    // //         })
+
+    // //         .join("");
+    // //         selectEle.innerHTML = htmlString;
+    // //     };
+    // //     const displayusers =(data) => {
+    // //         btn.disabled = false; 
+    // //         let li
+    // //         btn.addEventListenner ("click"), () => {
+    // //         data.forEach((user) => {
+    // //                     +- `<div>
+    // //                         <span>${user.name}</span>
+    // //                         <span>${user.email}</tdspan
+    // //                             </div>`
+    // //         })
+    // //         users.innerHTML=li;}
+    // //     };
+
+    // // load().then((date)=> {
+    // //     showData(data);
+    // //     displayusers(data);
+    // // });
+
+    // // fetch("https://jsonplaceholder.typicode.com/posts",
+    // // {
+    // //     method: "post",
+    // //     body:JSON.stringify({
+    // //         little:"foo",
+    // //         body:"bar",
+    // //         userId:1,
+    // //     }),
+    // //     headers:{
+    // //         "content-type" : "application/json; charset=UTF-8"
+    // //     }
+    // // })
+    // // then((response)=> response.json())
+    // //  then((responsejson) => console.log(responsejson));
+
+    // //  let welcomemsg = const name = new promise((res, rej) => {
+    // //      setTimeout(() => {
+    // //          res("welcome");
+    // //          console.log(res)
+    // //      }, 3000);
+    // //  let imgShowing = () => {
+    // //      userimg.innerHTML ='<img src="download.jpg">'
+    
+    // //  };
+    // //  let thanksmsg = new promise((res, rej) => {
+    // //      setTimeout(() => {
+    // //          res ("thanks");
+    // //      }, 3000)
+    // //  });
+    // //  let redirect = new promise((res, rej)=> {
+
+    // //  })
+
+
+    // //  };

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise functions</title>
+</head>
+<body>
+    <script>
+        var P1 = new Promise((res,rej)=>{
+            setTimeout(function(){
+                res("P1 is Done")
+            },3000)
+        });
+
+        var P2 = new Promise((res,rej)=>{
+            setTimeout(function(){
+                res("P2 is Done")
+            },2000)
+        });
+
+        var P3 = new Promise((res,rej)=>{
+            setTimeout(function(){
+                res("P3 is Done")
+            },5000)
+        })
+
+        // Promise.race([P1,P2,P3])
+        // .then((msg)=>{document.write("Done"); console.log(msg);})
+
+        // Promise.all([P1,P2,P3])
+        // .then((msg)=>{document.write("Done")});
+    </script>
+</body>
+</html>

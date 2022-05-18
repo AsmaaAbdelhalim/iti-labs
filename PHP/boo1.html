@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+    .navbar{
+        background-color: silver;
+        color:black;
+        margin: 0%;
+          
+
+
+    }
+    
+.header{
+    background-image:"../images.welcome.jpg";
+  }
+  
+/* #header-img {
+  width: 100%;
+  height: 50px;
+} */
+ .btn0{
+     background-color: blue;
+     padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+     
+ 
+    img 
+  {border-radius: 50%; }
+.btn1{
+    background-color: green;
+    border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn2{
+    background-color: red;
+    border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;}
+    .btn3{
+       background-color: skyblue;
+       border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+    }
+.btn4{
+    background-color:  blue;
+    border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  float:center;
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Vacation Rentals</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Top Destinations</a></li>
+     
+      <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">About US <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li></ul>
+             <li><a href="#">Book Tickets</a></li>
+             <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Reservation <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+         </li> </ul>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</nav>
+
+<div class="header">
+    <div class="container text-center"></div>
+    <div style="background-image: url(images/vacation.jpg);
+     background-size: cover; background-position: center; height: 150px" />
+    <button type="button" class="btn0">Start Now!</button>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-3 text-center">    
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+          <img src="images/plage.jpg" alt="Image" width="250" height="200">
+        <p><h3>type 1</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button type="submit" class="btn1">Book Now</button>
+      </div>
+      <div class="col-sm-4">
+           <img src="images/house.jpg" alt="Image" width="250" height="200">
+        <p><h3>type 2</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button type="submit" class="btn2">Book Now</button>
+      </div>
+      <div class="col-sm-4"> 
+          <img src="images/plage1.jpg" alt="Image" width="250" height="200">
+        <p><h3>type 3</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button type="submit" class="btn3">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div><br>
+<footer> <hr></hr>
+    <p><button type="submit" class="btn4">About Us</button>
+    <a href="mailto:hege@example.com"> support      privacy policy </a> Vacation Rentals</p>
+  </footer>
+  
+</body>
+</html>
